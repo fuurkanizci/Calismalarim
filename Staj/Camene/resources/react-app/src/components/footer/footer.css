@@ -1,0 +1,124 @@
+.footer-container {
+    background-color: #ffffff;
+    color: #777777;
+    text-align: left;
+
+    padding: 32px;
+    /* Container içi boşluk */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 32px;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.back-to-top:hover {
+    transform: translateY(-6px);
+}
+
+.back-to-top .icon {
+    font-size: 3rem;
+    /* İcon boyutu */
+    color: #363636;
+    /* İcon rengi */
+}
+
+.link-animation {
+    position: relative;
+    text-decoration: none;
+    color: #000000;
+    /* Metin rengi */
+    padding-bottom: 2px;
+    /* Alt çizgiyi görünür hale getirmek için boşluk */
+}
+
+.link-animation::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: #000;
+    /* Çizgi rengi */
+    transition: width 0.3s ease;
+}
+
+.link-animation:hover::after {
+    width: 100%;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+.div-position {
+    flex: 1;
+    padding: 10px;
+}
+
+.font-settings {
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.div-control {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.group-gaps {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.brdr {
+}
+@media (max-width: 768px) {
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .div-control {
+        border-left: none;
+        padding-left: 0;
+        margin-top: 20px;
+    }
+
+    .back-to-top {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        font-size: 3.5rem;
+    }
+
+    .font-settings {
+        font-size: 14px;
+    }
+
+    .link-animation {
+        font-size: 16px;
+    }
+
+    .link-animation span {
+        font-size: 14px;
+    }
+}

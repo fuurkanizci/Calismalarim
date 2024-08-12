@@ -1,0 +1,16 @@
+{
+  "name": "reactgiris",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "slugify": "^1.6.6"
+  },
+  "scripts": {
+    "start": "node index"
+  },
+  "author": "Furkan İzci <fuurkanizci.10@gmail.com>",
+  "license": "ISC",
+  "description": ""
+}

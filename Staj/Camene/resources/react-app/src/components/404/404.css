@@ -1,0 +1,41 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+.cont-margin {
+    height:fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: -webkit-fill-available;
+}
+/* .cont-404 img {
+
+
+} */
+.cont-404 button {
+    padding: 12px 15px;
+    background-color: indianred;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.3s;
+}
+.cont-404 button:hover {
+    background-color: firebrick;
+}
+@media (max-width: 768px) {
+    * {
+        padding: 0%;
+        margin: 0%;
+        box-sizing: border-box;
+    }
+    .cont-margin {
+        height: 100vh;
+        width: auto;
+        object-fit: contain;
+    }
+}

@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Montserrat", sans-serif !important;
+
+    font-weight: 400 !important;
+    /* Buraya istediğiniz ağırlık değerini yazabilirsiniz */
+    font-style: normal !important;
+}
+
+.baskervville-sc-regular {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Text underline */
+.text-with-underline {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+}
+
+.text-with-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    /* Alt çizgi ile metin arasındaki boşluk */
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.text-with-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Text underline */
+.text-with-underline-black {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+}
+
+.text-with-underline-black::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    /* Alt çizgi ile metin arasındaki boşluk */
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.text-with-underline-black:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+slick-next:before,
+[dir="rtl"] .slick-prev:before {
+    content: none !important;
+}
+
+.slick-prev:before {
+    content: none !important;
+}
+
+.custom-arrow {
+    display: flex !important;
+}
+
+.custom-arrow::before {
+    content: none;
+}
+
+.custom-right-arrow {
+    bottom: 0px !important;
+    right: 1rem !important;
+    top: auto !important;
+}
+
+.custom-left-arrow {
+    bottom: 0px !important;
+    right: 7rem !important;
+    top: auto !important;
+    left: auto !important;
+}
+
+.scroll-bar-item::-webkit-scrollbar {
+    width: 12px;
+    /* Kaydırma çubuğu genişliği */
+}
+
+.scroll-bar-item::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Kaydırma çubuğu pisti */
+}
+
+.scroll-bar-item::-webkit-scrollbar-thumb {
+    background: #fff;
+    /* Kaydırma çubuğu rengi */
+    border-radius: 10px;
+    /* Köşe yuvarlama */
+}
+
+/* Mozilla Firefox için */
+.scroll-bar-item {
+    scrollbar-width: thin;
+    /* Kaydırma çubuğu genişliği */
+    scrollbar-color: #fff #000;
+    /* Kaydırma çubuğu ve pisti rengi */
+}
+
+/* Swiper pagination dots */
+.swiper-pagination {
+    bottom: 2rem !important;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 0;
+    /* Kare yapmak için */
+    opacity: 1;
+    padding: 10px;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: white;
+    padding: 10px;
+}
+
+.scale-up-center {
+    -webkit-animation: scale-up-center 50s cubic-bezier(0.39, 0.575, 0.565, 1)
+        infinite both;
+    animation: scale-up-center 50s cubic-bezier(0.39, 0.575, 0.565, 1) infinite
+        both;
+}
+
+@-webkit-keyframes scale-up-center {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    100% {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+}
+
+@keyframes scale-up-center {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    100% {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+}
+
+@media (min-width: 1536px) {
+    .container {
+        max-width: 1400px;
+    }
+}

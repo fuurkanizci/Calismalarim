@@ -1,0 +1,204 @@
+import React, { useState, useEffect, useRef } from "react";
+import "./footer.css"; // CSS dosyası, stiller için
+import { FaArrowCircleUp } from "react-icons/fa";
+import { CiInstagram } from "react-icons/ci";
+import resimDeneme from "../../../../../public/images/camene-deneme.png";
+
+const Footer = () => {
+    const [showButton, setShowButton] = useState(false);
+    const footerRef = useRef(null);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 300) {
+                setShowButton(true);
+            } else {
+                setShowButton(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            },
+            { threshold: 0.1 } // 10% görünürlüğe ulaşıldığında tetiklenir
+        );
+
+        const footerElements = footerRef.current.querySelectorAll(".fade-in");
+
+        footerElements.forEach((element) => {
+            observer.observe(element);
+        });
+
+        return () => {
+            footerElements.forEach((element) => {
+                observer.unobserve(element);
+            });
+        };
+    }, []);
+
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    return (
+        <footer className="footer relative " ref={footerRef}>
+            <div className="col-span-2 grid grid-cols-1 grid-rows-1 gap-4 pl-14 fade-in">
+                <div>
+                    <img
+                        className="h-20 m-4"
+                        src={resimDeneme}
+                        alt="adas"
+                    ></img>
+                </div>
+                <div>
+                    {showButton && (
+                        <button
+                            className="back-to-top absolute top-5 right-5  "
+                            onClick={scrollToTop}
+                        >
+                            <FaArrowCircleUp className="text-7xl" />
+                        </button>
+                    )}
+                </div>
+            </div>
+            <div className="grid grid-cols-3 fade-in">
+                <div className="footer-links col-span-3 grid grid-cols-3 grid-rows-2 gap-8 max-md:grid-cols-1 pl-16 ">
+                    <div className="fade-in">
+                        <b>
+                            <p className="textType kutu">İLETİŞİM BİLGİLERİ</p>
+                        </b>
+                        <div className="cont-margins">
+                            <p>Telefon</p>
+                            <a href="/contact">+905531599002</a>
+                        </div>
+                        <div className="cont-margins">
+                            <p>E-mail</p>
+                            <a href="/mail">fuurkanizci@gmail.com</a>
+                        </div>
+                    </div>
+                    <div className="fade-in">
+                        <b>
+                            <p className="textType kutu mt-2">PROJELER </p>
+                        </b>
+                        <div className="cont2-margin">
+                            <a href="/projects">Social Media</a>
+                        </div>
+                        <div className="cont2-margin">
+                            <a href="/projects">Web Site</a>
+                        </div>
+                        <div className="cont2-margin">
+                            <a href="/projects">Web Site Design</a>
+                        </div>
+                    </div>
+                    <div className="order-last md:order-none fade-in ">
+                        <form action="/action_page.php">
+                            <b>
+                                <h1>
+                                    <p className="textType kutu mt-2">
+                                        İLETİŞİMDE KALALIM
+                                    </p>
+                                </h1>
+                            </b>
+                            <div className="form-container">
+                                <input
+                                    type="text"
+                                    className="text-input text-white placeholder:text-white"
+                                    id="flname"
+                                    name="name"
+                                    placeholder="İsim-Soyisim"
+                                />
+                                <br />
+                                <input
+                                    type="text"
+                                    className="text-input text-white placeholder:text-white"
+                                    id="mail"
+                                    name="mail"
+                                    placeholder="Email"
+                                />
+                                <br />
+                                <select
+                                    id="country"
+                                    name="country"
+                                    className="w-full h-8 form-container font-bold"
+                                >
+                                    <option selected disabled hidden>
+                                        <p className="text-xs pl-1  font-bold">
+                                            İlgilenilen Proje
+                                        </p>
+                                    </option>
+                                    <option value="Socialthinks">
+                                        Social Media
+                                    </option>
+                                    <option value="Socialthinks">
+                                        Web Site
+                                    </option>
+                                    <option value="Socialthinks">
+                                        Web Site Design
+                                    </option>
+                                </select>
+                                <br />
+                                <div>
+                                    <h1>
+                                        <button>
+                                            <input
+                                                className="submit-button w-full font-bold"
+                                                type="submit"
+                                                value="GÖNDER"
+                                            />
+                                        </button>
+                                    </h1>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div className="fade-in">
+                        <b>
+                            <p className="textType kutu mt-2">ADRES</p>
+                        </b>
+                        <div className="cont-margins">
+                            <a
+                                href="/address"
+                                className="textType footer-links pr-24"
+                            >
+                                Kaptanpaşa Mah, Piyalepaşa Blv. Famas Plaza
+                                No:77 B Blok K:4 No:71, 34384 Şişli/İstanbul
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="fade-in">
+                <hr />
+                <div align="center">
+                    <p>
+                        &copy; {new Date().getFullYear()} Camene. Tüm hakları
+                        saklıdır.
+                    </p>
+                    <a
+                        className=""
+                        href="http://bit.ly/furkanizci"
+                        target="blank"
+                    >
+                        <CiInstagram className="custom-icon icon-container" />
+                    </a>
+                </div>
+            </div>
+        </footer>
+    );
+};
+
+export default Footer;

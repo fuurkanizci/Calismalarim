@@ -1,0 +1,9 @@
+ <>
+      <User
+        name="Furkan"
+        surname="İzci"
+        isLoggedIn={true}
+        age={21}
+        friends={["Uğur", "Demo", "Erol"]}
+      />
+    </>

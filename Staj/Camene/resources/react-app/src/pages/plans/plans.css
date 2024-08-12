@@ -1,0 +1,274 @@
+.plans {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    padding-top: 10px;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+.plans h1 {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid gray;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.plans p {
+    font-weight: bold;
+}
+
+.firsttext {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+
+    padding: 1rem;
+}
+
+.image1 {
+    width: 1170px;
+    height: 300px;
+}
+
+.text_villa_tipleri {
+    color: white;
+    position: relative;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 150px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.inclusivediv {
+    position: relative;
+    width: 97%;
+    height: 700px;
+    border-radius: 10px;
+    background-color: white;
+    margin-top: 100px;
+    margin-left: 20px;
+}
+
+.inclusivetip1 {
+    width: 700px;
+    height: 500px;
+    border: 1px solid black;
+    display: block;
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 30px;
+    border-radius: 10px;
+}
+
+.inclusivetip1 h1 {
+    color: green;
+    font-size: 35px;
+    margin-left: 50px;
+    margin-top: 50px;
+    display: block;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.inclusivetip1 h2 {
+    color: green;
+    font-size: 50px;
+    margin-left: 5px;
+    margin-top: 30px;
+    display: block;
+    display: inline-block;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+.inclusivetip1longtext {
+    color: black;
+    margin-left: 0px;
+    width: 100%;
+    height: auto;
+    padding-left: 20rem;
+    margin-top: 0px;
+    float: left;
+    font-size: 22.5px;
+    font-weight: bold;
+}
+
+.inclusivetip1img {
+    position: absolute;
+    padding-right: 21rem;
+    padding-left: 2rem;
+    padding-top: 11rem;
+}
+
+.intermediatetext p {
+    width: 100%;
+    text-align: center;
+}
+
+.inclusivetip2 {
+    width: 700px;
+    height: 500px;
+    border: 1px solid black;
+    display: block;
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 30px;
+    border-radius: 10px;
+}
+
+.inclusivetip2 h1 {
+    color: green;
+    font-size: 35px;
+    margin-left: 50px;
+    margin-top: 50px;
+    display: block;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.inclusivetip2 h2 {
+    color: green;
+    font-size: 50px;
+    margin-left: 5px;
+    margin-top: 30px;
+    display: block;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.inclusivetip2longtext {
+    color: black;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-top: 0px;
+    float: left;
+    font-weight: bold;
+    font-size: 22.5px;
+    padding-left: 20rem;
+}
+
+.inclusivetip2img {
+    position: absolute;
+    padding-right: 21rem;
+    padding-left: 2rem;
+    padding-top: 11rem;
+}
+
+.intermediatetext {
+    width: 100%;
+    height: auto;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    padding-left: 0rem;
+    padding-bottom: 30px;
+    font-size: 30px;
+}
+
+.contentimg {
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.last-img {
+    margin-top: 100px;
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+}
+
+.tarihbaslik {
+    color: black;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 70px;
+}
+
+.tarihbasliktext {
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1rem;
+    color: gray;
+}
+
+@media only screen and (max-width: 600px) {
+    .text_villa_tipleri {
+        color: black;
+    }
+
+    .intermediatetext {
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .inclusivediv {
+        padding: 1rem;
+        margin: 0px;
+        width: 100%;
+        height: auto;
+    }
+
+    .inclusivetip1img {
+        position: relative !important;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        padding-top: 1rem;
+    }
+}
+
+.plans {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.inclusivetip1longtext {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.inclusivetip1 {
+    height: auto !important;
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .inclusivetip1 {
+        margin-left: 0px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .inclusivetip2 {
+        margin-left: 0px;
+    }
+}
+
+.last_inclusive {
+    width: 100%;
+    height: auto;
+}
